@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="UOWCOIN（仮）公式サイト — Solana Meme Coin" />
+  <title>UOWCOIN — Official</title>
+
+  <style>
+    :root{
+      --bg:#0b0f17; --card:#111827; --muted:#94a3b8; --text:#e5e7eb;
+      --accent:#22c55e; --accent2:#60a5fa; --line:#1f2937;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(1200px 600px at 20% 0%, #10204d 0%, transparent 50%),
+                     radial-gradient(900px 500px at 90% 20%, #1a3d2b 0%, transparent 45%),
+                     var(--bg);
+         color:var(--text); font-family: ui-sans-serif, system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", "Segoe UI", sans-serif;}
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    .nav{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px}
+    .badge{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:999px}
+    .nav a{color:var(--muted);text-decoration:none;margin-left:14px;font-size:14px}
+    .nav a:hover{color:var(--text)}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:center;margin-top:24px}
+    @media (max-width:860px){.hero{grid-template-columns:1fr}}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+          border:1px solid var(--line); border-radius:20px; padding:20px; box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    h1{font-size:44px;line-height:1.05;margin:0 0 10px}
+    @media (max-width:860px){h1{font-size:36px}}
+    .sub{color:var(--muted);font-size:16px;line-height:1.7}
+    .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:10px 14px;
+         border:1px solid var(--line); text-decoration:none; font-weight:700; font-size:14px}
+    .btn.primary{background:linear-gradient(90deg, rgba(34,197,94,.25), rgba(96,165,250,.2));
+                 border-color:rgba(34,197,94,.35)}
+    .btn:hover{transform:translateY(-1px)}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:14px}
+    .col6{grid-column:span 6}
+    .col4{grid-column:span 4}
+    .col8{grid-column:span 8}
+    .col12{grid-column:span 12}
+    @media (max-width:860px){.col6,.col4,.col8{grid-column:span 12}}
+    .k{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.12em}
+    .v{font-size:16px;margin-top:6px}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;}
+    .addr{display:flex;gap:10px;align-items:center;justify-content:space-between;border:1px dashed var(--line);
+          padding:12px 12px;border-radius:14px;margin-top:10px}
+    .copy{cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--text);
+          padding:8px 10px;border-radius:12px;font-weight:700}
+    .copy:hover{border-color:rgba(96,165,250,.6)}
+    .section{margin-top:22px}
+    h2{margin:0 0 10px;font-size:20px}
+    ol{margin:10px 0 0 18px;color:var(--muted);line-height:1.8}
+    .pill{display:inline-block;font-size:12px;color:var(--muted);border:1px solid var(--line);padding:5px 9px;border-radius:999px;margin-right:8px;margin-top:8px}
+    .footer{margin:30px 0 10px;color:var(--muted);font-size:12px;line-height:1.8}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">
+        <div style="width:34px;height:34px;border-radius:12px;background:linear-gradient(135deg, rgba(34,197,94,.6), rgba(96,165,250,.6));"></div>
+        <div>UOWCOIN</div>
+        <span class="badge">Official (Pre-launch)</span>
+      </div>
+      <div>
+        <a href="#about">About</a>
+        <a href="#how">How to buy</a>
+        <a href="#token">Token</a>
+        <a href="#links">Links</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="card">
+        <h1>世はまさに、<br/>大冷笑時代。</h1>
+        <div class="sub">
+          Solana発・供給1億・税なし。<br/>
+          ここが公式の“目印”です。偽サイト/偽アドレスに注意。
+        </div>
+
+        <div class="cta">
+          <a class="btn primary" href="https://x.com/uowcoin888?s=21" target="_blank" rel="noreferrer">X (Official)</a>
+          <a class="btn" href="#how">How to Buy</a>
+          <a class="btn" href="#token">Token Info</a>
+        </div>
+
+        <div class="section" id="token">
+          <div class="k">Chain</div>
+          <div class="v"><span class="pill">Solana</span></div>
+
+          <div style="margin-top:12px" class="k">Mint Address</div>
+          <div class="addr">
+            <div class="mono" id="addr">TBA (Not deployed yet)</div>
+            <button class="copy" onclick="copyAddr()">Copy</button>
+          </div>
+
+          <div class="grid" style="margin-top:14px">
+            <div class="col6">
+              <div class="k">Total Supply</div>
+              <div class="v">100,000,000</div>
+            </div>
+            <div class="col6">
+              <div class="k">Tax</div>
+              <div class="v">0%（No Tax）</div>
+            </div>
+          </div>
+
+          <div class="sub" style="margin-top:10px">
+            ※デプロイ後、ここに<strong>正式Mintアドレス</strong>を載せます。<br/>
+            公式Xの固定ポストのURLと、このサイトのURLが一致しているか必ず確認してください。
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="k">Meme Art</div>
+        <div class="v" style="margin-top:10px">
+          <div style="height:280px;border-radius:18px;border:1px solid var(--line);
+                      background:linear-gradient(135deg, rgba(255,255,255,.05), rgba(255,255,255,.01));
+                      display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);padding:18px;">
+            ここにロゴ / マスコット / ミーム画像<br/>
+            （PNG / SVG）を置く
+          </div>
+        </div>
+
+        <div class="section" id="about">
+          <h2>About</h2>
+          <div class="sub">
+            冷笑がデフォな時代に、ユーモアで殴る。<br/>
+            ここは「公式情報だけ」を集約する場所です。
+          </div>
+
+          <div class="grid">
+            <div class="col6">
+              <div class="k">Status</div>
+              <div class="v">Pre-launch（準備中）</div>
+            </div>
+            <div class="col6">
+              <div class="k">Goal</div>
+              <div class="v">コミュニティの“目印”になる</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid section" id="how">
+      <div class="card col8">
+        <h2>How to Buy（ローンチ時に確定）</h2>
+        <ol>
+          <li>Solana対応ウォレットを用意（例：Phantomなど）</li>
+          <li>SOLを用意（ガス代・スワップ用）</li>
+          <li>公式が案内するDEXで、Mintアドレスを貼り付けて検索</li>
+          <li>Swapして入手</li>
+          <li>偽トークン注意：<strong>公式Xの固定ポスト</strong>と<strong>このサイト</strong>の情報が一致しているか確認</li>
+        </ol>
+        <div class="sub" style="margin-top:10px">
+          ※DEX（Raydium / Orca / Meteoraなど）とチャートリンクはローンチ時に追記。
+        </div>
+      </div>
+
+      <div class="card col4">
+        <h2>Liquidity Lock（おすすめ設定）</h2>
+        <div class="sub">
+          信頼を取りに行くなら、LPは<strong>12〜24か月ロック</strong>推奨。<br/>
+          ロックはStreamflow等のロッカーで実施するのが一般的です。
+        </div>
+        <div style="margin-top:12px">
+          <div class="k">Recommended Lock</div>
+          <div class="v"><strong>24 months</strong>（強め）<br/>最低でも12 months</div>
+        </div>
+        <div style="margin-top:12px">
+          <div class="k">Proof</div>
+          <div class="v">ロック証跡リンク（TBA）</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid section" id="links">
+      <div class="card col12">
+        <h2>Official Links</h2>
+        <div class="sub">ここが“公式リンク集”。偽URL対策で最重要。</div>
+        <div style="margin-top:10px">
+          <span class="pill">X: https://x.com/uowcoin888?s=21</span>
+          <span class="pill">Telegram: TBA</span>
+          <span class="pill">Discord: TBA</span>
+          <span class="pill">DEX: TBA</span>
+          <span class="pill">Chart: TBA</span>
+          <span class="pill">Explorer: TBA</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <strong>Disclaimer</strong><br/>
+      本サイトは情報提供のみを目的とし、投資助言ではありません。暗号資産は価格変動が非常に大きく、損失が発生する可能性があります。ご自身で十分に調査のうえ、自己責任で判断してください。<br/>
+      偽サイト/偽アドレスによる詐欺にご注意ください（公式X固定ポストと本サイトの一致確認）。
+    </div>
+  </div>
+
+  <script>
+    function copyAddr(){
+      const text = document.getElementById('addr').innerText.trim();
+      if(!text || text.toLowerCase().includes('tba')){
+        alert('まだMintアドレス未確定です（TBA）');
+        return;
+      }
+      navigator.clipboard.writeText(text).then(()=>alert('Copied!')).catch(()=>alert('Copy failed'));
+    }
+  </script>
+</body>
+</html>
